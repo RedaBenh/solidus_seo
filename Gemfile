@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-ruby '2.5.8'
+ruby '~>2.7.3'
 source 'https://rubygems.org'
 
 branch = ENV.fetch('SOLIDUS_BRANCH', 'master')
@@ -7,7 +7,7 @@ gem "solidus", github: "solidusio/solidus", branch: branch
 # Provides basic authentication functionality for testing parts of your engine
 gem 'solidus_auth_devise'
 
-gem "rails", '>= 5.1.0' # workaround for bundler resolution issue
+gem "rails", '>= 7.0.4' # workaround for bundler resolution issue
 gem "rails-controller-testing", group: :test
 
 if branch == 'master' || branch >= 'v2.5'
@@ -25,3 +25,5 @@ group :test do
 end
 
 gemspec
+
+gem "solidus_frontend", '~> 3.2'

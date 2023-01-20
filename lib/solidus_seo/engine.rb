@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'active_support/dependencies'
 require_dependency 'solidus_seo/jsonld/tag_helper'
 require_dependency 'solidus_seo/helpers/base_helper'
 

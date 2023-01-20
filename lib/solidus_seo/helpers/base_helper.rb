@@ -9,11 +9,11 @@ module SolidusSeo
         crumbs = []
 
         if taxon
-          crumbs << [Spree.t(:products), products_url]
+          crumbs << [t(:products), products_url]
           crumbs += taxon.ancestors.collect { |a| [a.name, spree.nested_taxons_url(a.permalink)] } unless taxon.ancestors.empty?
           crumbs << [taxon.name, spree.nested_taxons_url(taxon.permalink)]
         else
-          crumbs << [Spree.t(:products), products_url]
+          crumbs << [t(:products), products_url]
         end
 
         crumbs

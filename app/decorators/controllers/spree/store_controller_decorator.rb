@@ -8,6 +8,6 @@ module Spree
       end
     end
 
-    ::Spree::StoreController.prepend(self)
+    ::Spree::BaseController.prepend(self)
   end
 end

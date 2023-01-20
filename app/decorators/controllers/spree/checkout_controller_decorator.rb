@@ -18,6 +18,6 @@ module Spree
 
     private
 
-    ::Spree::StoreController.prepend(self)
+    ::Spree::BaseController.prepend(self)
   end
 end
