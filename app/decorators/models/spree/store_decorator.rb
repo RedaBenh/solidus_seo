@@ -33,6 +33,7 @@ module Spree
         image_src: seo_image,
         og: {
           site_name: :site,
+          title: :site,
           type: 'website',
           image: {
             '_': :image_src,
